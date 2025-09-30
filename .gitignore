@@ -1,0 +1,24 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node dependencies (if you ever use npm for tooling)
+node_modules/
+
+# Jekyll build (if using Jekyll for GitHub Pages)
+_site/
+.sass-cache/
+
+# Hugo build (if using Hugo)
+public/
+
+# VSCode settings
+.vscode/
+
+# Logs
+*.log
+
+# Mac system files
+._*
