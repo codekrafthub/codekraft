@@ -3,112 +3,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CodeKraft | The best EDU-service in town</title>
+  <title>CodeKraft | Where Code Becomes Craft, Dreams Become Reality</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Top Navigation Bar -->
   <nav class="navbar">
     <div class="logo">CodeKraft</div>
-    <ul class="nav-links">
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Who We Are</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#upcoming">Upcoming Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Home -->
-  <section id="home" class="section hero">
-    <h1>CodeKraft</h1>
-    <h2>The best EDU-service in town</h2>
-    <p>Empowering students with real industry projects and expert training.</p>
-    <a href="#services" class="cta">Explore Our Services</a>
+  <!-- Hero Section with Slider Buttons -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>CodeKraft</h1>
+      <p class="tagline">Where Code Becomes Craft, Dreams Become Reality</p>
+      <div class="slider-buttons">
+        <button class="slider-btn active" data-target="#services">Our Services</button>
+        <button class="slider-btn" data-target="#contact">Contact Us</button>
+      </div>
+    </div>
   </section>
 
   <!-- Who We Are -->
-  <section id="about" class="section">
-    <h2>Who We Are</h2>
-    <p>CodeKraft is a consultancy and training platform dedicated to bridging the gap between college education and industry needs. Our goal is to provide students with hands-on experience through real-world projects and expert-led training sessions.</p>
+  <section id="about" class="card">
+    <h2 class="about-headline">
+      <span class="impact">innovate, automate, and scale</span>
+    </h2>
+    <p class="about-desc">
+      That's what we do at Codekraft. Alongside, our academic programs deliver internships, projects, and placement-focused training to create industry-ready talent. Together, we enable businesses to grow and students to thrive.
+    </p>
   </section>
 
   <!-- Services -->
-  <section id="services" class="section">
+  <section id="services" class="card services-section">
     <h2>Our Services</h2>
-    <div class="service-columns">
-      <div>
-        <h3>Training</h3>
-        <ul>
-          <li>C language</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>Advanced Excel</li>
-          <li>Data Visualization</li>
-          <li>Introduction to Data Science</li>
-          <li>Task automation</li>
-        </ul>
+    <div class="services-panels">
+      <!-- Left: Academic Services -->
+      <div class="panel">
+        <h3>Academic Services</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Technical Training</button>
+            <div class="accordion-body">
+              <ul>
+                <li>C, C++, Python, SQL, Advanced Excel</li>
+                <li>Data Visualization, Data Science Basics</li>
+                <li>Task Automation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Career Readiness</button>
+            <div class="accordion-body">
+              <ul>
+                <li>Resume & LinkedIn building</li>
+                <li>Soft Skills</li>
+                <li>Interview Prep</li>
+                <li>Counselling</li>
+                <li>Study Abroad Guidance</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Industry Exposure</button>
+            <div class="accordion-body">
+              <ul>
+                <li>Live Projects</li>
+                <li>Internships</li>
+                <li>Hackathons</li>
+                <li>Bootcamps</li>
+                <li>Expert Talks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Career Guidance</h3>
-        <ul>
-          <li>Profile Building</li>
-          <li>Soft Skills</li>
-          <li>Counselling</li>
-          <li>Study Abroad Guidance</li>
-        </ul>
+      <!-- Right: Industry Services -->
+      <div class="panel">
+        <h3>Industry Services</h3>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">AI & Automation</button>
+            <div class="accordion-body">
+              <ul>
+                <li>Process Automation</li>
+                <li>Chatbots</li>
+                <li>Predictive Analytics</li>
+                <li>AI-powered E-learning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Software Solutions</button>
+            <div class="accordion-body">
+              <ul>
+                <li>Web & Mobile Apps</li>
+                <li>Cloud & Database Systems</li>
+                <li>ML Consulting</li>
+                <li>Digital Transformation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">SME & Rural Tech</button>
+            <div class="accordion-body">
+              <ul>
+                <li>Automated Billing</li>
+                <li>Inventory & Attendance Systems</li>
+                <li>School/College ERP</li>
+                <li>CSR-driven E-learning Platforms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <h2>Industry Projects Portfolio</h2>
-    <div class="portfolio-cards">
-      <div class="card">
-        <h3>Project 1</h3>
-        <p>Description, Technologies, Outcome</p>
+ <section id="portfolio" class="card portfolio-section">
+  <h2>Project Portfolio</h2>
+  <p class="project-subtitle">Low-Cost | High-Impact | AI-Driven</p>
+  <div class="project-cards">
+    <!-- 1. AI & Data Science Solutions -->
+    <div class="project-card" data-link="https://yourdomain.com/project1" tabindex="0">
+      <div class="project-figure">
+        <!-- Bar chart + arrow icon -->
+        <svg width="70" height="70" viewBox="0 0 70 70">
+          <circle cx="35" cy="35" r="30" fill="#E9F1F7"/>
+          <rect x="10" y="40" width="8" height="20" fill="#3BB1E6"/>
+          <rect x="24" y="30" width="8" height="30" fill="#0B2B3C"/>
+          <rect x="38" y="20" width="8" height="40" fill="#3BB1E6"/>
+          <rect x="52" y="10" width="8" height="50" fill="#0B2B3C"/>
+          <polyline points="10,55 24,45 38,35 52,25" fill="none" stroke="#3BB1E6" stroke-width="3"/>
+          <polygon points="52,25 58,27 54,31" fill="#3BB1E6"/>
+        </svg>
       </div>
-      <div class="card">
-        <h3>Project 2</h3>
-        <p>Description, Technologies, Outcome</p>
-      </div>
-      <!-- Add more as needed -->
+      <h3>AI & Data Science Solutions</h3>
+      <p>We turn raw data into actionable insights that fuel growth and smarter decisions.</p>
     </div>
-  </section>
+    <!-- 2. Business Process Automation -->
+    <div class="project-card" data-link="https://yourdomain.com/project2" tabindex="0">
+      <div class="project-figure">
+        <!-- Robot arm automating tasks -->
+        <svg width="70" height="70" viewBox="0 0 70 70">
+          <circle cx="35" cy="35" r="30" fill="#E9F1F7"/>
+          <rect x="30" y="30" width="10" height="20" rx="4" fill="#3BB1E6"/>
+          <rect x="33" y="50" width="4" height="10" fill="#0B2B3C"/>
+          <circle cx="35" cy="60" r="5" fill="#3BB1E6"/>
+          <polyline points="35,30 55,15" stroke="#0B2B3C" stroke-width="3" fill="none"/>
+          <circle cx="55" cy="15" r="4" fill="#0B2B3C"/>
+        </svg>
+      </div>
+      <h3>Business Process Automation</h3>
+      <p>We automate repetitive tasks to save time, reduce costs, and increase efficiency.</p>
+    </div>
+    <!-- 3. Conversational AI & Chatbots -->
+    <div class="project-card" data-link="https://yourdomain.com/project3" tabindex="0">
+      <div class="project-figure">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <circle cx="35" cy="35" r="15" fill="#E9F1F7"/>
+          <rect x="6" y="10" width="28" height="18" rx="6" fill="#3BB1E6"/>
+          <polygon points="16,28 12,36 20,28" fill="#3BB1E6"/>
+        </svg>
+      </div>
+      <h3>Conversational AI & Chatbots</h3>
+      <p>We design intelligent chatbots that simplify communication and enhance engagement.</p>
+    </div>
+    <!-- 4. Smart Healthcare & Education -->
+    <div class="project-card" data-link="https://yourdomain.com/project4" tabindex="0">
+      <div class="project-figure">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <circle cx="35" cy="35" r="25" fill="#E9F1F7"/>
+          <circle cx="20" cy="20" r="16" fill="#3BB1E6"/>
+          <rect x="17" y="10" width="6" height="20" rx="2" fill="#fff"/>
+          <rect x="10" y="17" width="20" height="6" rx="2" fill="#fff"/>
+        </svg>
+      </div>
+      <h3>Smart Healthcare & Education</h3>
+      <p>We build digital-first healthcare and education tools that improve accessibility and outcomes.</p>
+    </span>
 
-  <!-- Upcoming Projects -->
-  <section id="upcoming" class="section">
-    <h2>Upcoming Projects</h2>
-    <ul>
-      <li>Project Alpha – Internship available from Nov 2025</li>
-      <li>Project Beta – Applications open soon</li>
-      <!-- Add more as needed -->
-    </ul>
-  </section>
+    </div>
+    <!-- 5. Governance & Social Impact -->
+    <div class="project-card" data-link="https://yourdomain.com/project5" tabindex="0">
+      <div class="project-figure">
+        <!-- Hands shaking, bridge, globe -->
+        <svg width="70" height="70" viewBox="0 0 70 70">
+          <circle cx="35" cy="35" r="30" fill="#E9F1F7"/>
+          <!-- Bridge -->
+          <rect x="12" y="45" width="46" height="6" rx="3" fill="#3BB1E6"/>
+          <!-- Globe -->
+          <circle cx="35" cy="35" r="9" fill="#E9F1F7" stroke="#3BB1E6" stroke-width="2"/>
+          <!-- Hands shaking -->
+          <path d="M28 42 Q35 47 42 42" stroke="#0B2B3C" stroke-width="3" fill="none"/>
+          <rect x="28" y="40" width="5" height="5" rx="2" fill="#3BB1E6"/>
+          <rect x="37" y="40" width="5" height="5" rx="2" fill="#3BB1E6"/>
+        </svg>
+      </div>
+      <h3>Governance & Social Impact</h3>
+      <p>We create community-driven platforms that bridge gaps between citizens, services, and opportunities.</p>
+    </div>
+  </div>
+
+  <!-- Modal Placeholder for External Project Links -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <div class="modal-graphic">
+        <!-- Circular glowing arrow out icon for external link -->
+        <svg width="90" height="90" viewBox="0 0 90 90">
+          <circle cx="45" cy="45" r="40" fill="#E9F1F7"/>
+          <circle cx="45" cy="45" r="30" fill="#3BB1E6" opacity="0.16"/>
+          <circle cx="45" cy="45" r="22" fill="#3BB1E6" opacity="0.09"/>
+          <polyline points="37,53 60,30" stroke="#3BB1E6" stroke-width="5" fill="none" />
+          <polyline points="50,30 60,30 60,40" stroke="#0B2B3C" stroke-width="5" fill="none"/>
+        </svg>
+      </div>
+      <h3>See More</h3>
+      <p>You're about to visit a project showcase.<br>Click below to continue to the external project link.</p>
+      <a id="modalLink" href="#" target="_blank" class="external-link-btn">
+        <span class="link-btn-icon">&#8599;</span> Go to Project
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
+  <section id="contact" class="card">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>Phone: <a href="tel:+12345678901">+1 234-567-8901</a></p>
-    <p>WhatsApp Group: <a href="https://chat.whatsapp.com/yourgroup">Join Here</a></p>
+    <p>Email: <a href="mailto:codekraft.hub@gmail.com">codekraft.hub@gmail.com</a></p>
+    <p>Phone: <a href="tel:+91 78983-78933">+91 78983-78933</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 CodeKraft. All rights reserved.</p>
   </footer>
 
-  <!-- Interactivity JS for smooth scroll -->
+  <!-- Smooth scroll & slider logic -->
   <script>
+    // Hamburger toggle for mobile
+    document.getElementById('navToggle').onclick = function() {
+      document.getElementById('navLinks').classList.toggle('show');
+    };
+
+    // Accordion logic for Services section
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', function() {
+        // Close all other accordions in the same panel
+        let parentAccordion = header.closest('.accordion');
+        parentAccordion.querySelectorAll('.accordion-header').forEach(h => {
+          if (h !== header) h.classList.remove('active');
+        });
+        parentAccordion.querySelectorAll('.accordion-body').forEach(body => {
+          if (body.previousElementSibling !== header) body.classList.remove('open');
+        });
+
+        // Toggle current one
+        header.classList.toggle('active');
+        const body = header.nextElementSibling;
+        body.classList.toggle('open');
+      });
+    });
+
+    // Project card modal logic
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const link = card.getAttribute('data-link');
+        document.getElementById('modalLink').href = link;
+        document.getElementById('projectModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+      // Keyboard accessibility (Enter key opens modal)
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    document.getElementById('closeModal').onclick = function() {
+      document.getElementById('projectModal').style.display = 'none';
+      document.body.style.overflow = '';
+    };
+    document.getElementById('projectModal').onclick = function(e) {
+      if (e.target === this) {
+        document.getElementById('projectModal').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    };
+
+    // Smooth scroll for anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
+        document.getElementById('navLinks').classList.remove('show');
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
+      });
+    });
+
+    // Slider button logic
+    document.querySelectorAll('.slider-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.slider-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const target = this.getAttribute('data-target');
+        document.querySelector(target).scrollIntoView({behavior: 'smooth'});
       });
     });
   </script>
