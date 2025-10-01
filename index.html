@@ -136,7 +136,7 @@
   <p class="project-subtitle">Low-Cost | High-Impact | AI-Driven</p>
   <div class="project-cards">
     <!-- 1. AI & Data Science Solutions -->
-    <div class="project-card" data-link="https://yourdomain.com/project1" tabindex="0">
+    <div class="project-card" data-link="https://www.kaggle.com/code/kapilverma/energy-trading" tabindex="0">
       <div class="project-figure">
         <!-- Bar chart + arrow icon -->
         <svg width="70" height="70" viewBox="0 0 70 70">
@@ -181,7 +181,7 @@
       <p>We design intelligent chatbots that simplify communication and enhance engagement.</p>
     </div>
     <!-- 4. Smart Healthcare & Education -->
-    <div class="project-card" data-link="https://yourdomain.com/project4" tabindex="0">
+    <div class="project-card" data-link="https://github.com/kapil-verma/Hyper_or_Hypotension/blob/master/Hypertension%20or%20Hypotension.ipynb" tabindex="0">
       <div class="project-figure">
         <svg width="40" height="40" viewBox="0 0 40 40">
           <circle cx="35" cy="35" r="25" fill="#E9F1F7"/>
@@ -231,18 +231,28 @@
       </div>
       <h3>See More</h3>
       <p>You're about to visit a project showcase.<br>Click below to continue to the external project link.</p>
-      <a id="modalLink" href="#" target="_blank" class="external-link-btn">
-        <span class="link-btn-icon">&#8599;</span> Go to Project
-      </a>
+      <a id="modalLink" href="https://kapilve.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="external-link-btn">
+      <span class="link-btn-icon">&#8599;</span> Go to Project
+    </a>
     </div>
   </div>
 </section>
 
   <!-- Contact -->
-  <section id="contact" class="card">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:codekraft.hub@gmail.com">codekraft.hub@gmail.com</a></p>
-    <p>Phone: <a href="tel:+91 78983-78933">+91 78983-78933</a></p>
+  <section id="contact" class="card contact-section">
+    <div class="contact-content">
+      <div class="contact-details">
+        <h2>Let's talk!</h2>
+        <p>Email: <a href="mailto:codekraft.hub@gmail.com">codekraft.hub@gmail.com</a></p>
+        <p>Phone: <a href="tel:+91 78983-78933">+91 78983-78933</a></p>
+      </div>
+      <div class="contact-calendly">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/codekraft-hub/30min" style="min-width:320px;height:390px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -326,6 +336,11 @@
         document.querySelector(target).scrollIntoView({behavior: 'smooth'});
       });
     });
+
+    document.getElementById('modalLink').onclick = function(e) {
+  // No preventDefault, no custom logic
+  // This should just follow the href and open in new tab
+    };
   </script>
 </body>
 </html>

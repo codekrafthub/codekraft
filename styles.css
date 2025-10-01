@@ -409,11 +409,11 @@ section {
 }
 
 .project-modal {
-  pointer-events: auto; /* <-- Ensure overlay allows clicking through to modal content */
+  pointer-events: auto !important; /* <-- Ensure overlay allows clicking through to modal content */
 }
 
 .project-modal .modal-content {
-  pointer-events: auto; /* Ensure modal content is clickable */
+  pointer-events: auto !important; /* Ensure modal content is clickable */
 }
 
 @keyframes fadeInModal {
@@ -511,4 +511,33 @@ section {
   0% { transform: translateY(0);}
   100% { transform: translateY(-6px);}
 }
-.external-link-btn { pointer-events: auto; z-index: 99999 !important; }
+.project-modal {
+  z-index: 10000 !important;
+}
+.modal-content {
+  z-index: 10100 !important;
+  position: relative;
+}
+.external-link-btn {
+  z-index: 10200 !important;
+  pointer-events: auto !important;
+}
+
+.contact-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.contact-details {
+  flex: 1 1 240px;
+}
+.contact-calendly {
+  flex: 1 1 320px;
+  min-width: 320px;
+}
+
+@media (max-width: 800px) {
+  .contact-content { flex-direction: column; }
+  .contact-calendly { min-width: 0; width: 100%; }
+}
