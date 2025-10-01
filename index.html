@@ -56,8 +56,8 @@
             <button class="accordion-header">Technical Training</button>
             <div class="accordion-body">
               <ul>
-                <li>C, C++, Python, SQL, Advanced Excel</li>
-                <li>Data Visualization, Data Science Basics</li>
+                <li>Python, SQL, C, C++, Advanced Excel</li>
+                <li>Data Visualization, Data Science</li>
                 <li>Task Automation</li>
               </ul>
             </div>
@@ -153,7 +153,7 @@
       <p>We turn raw data into actionable insights that fuel growth and smarter decisions.</p>
     </div>
     <!-- 2. Business Process Automation -->
-    <div class="project-card" data-link="https://yourdomain.com/project2" tabindex="0">
+    <div class="project-card" data-link="https://kapilve.pythonanywhere.com/" tabindex="0">
       <div class="project-figure">
         <!-- Robot arm automating tasks -->
         <svg width="70" height="70" viewBox="0 0 70 70">
@@ -192,7 +192,6 @@
       </div>
       <h3>Smart Healthcare & Education</h3>
       <p>We build digital-first healthcare and education tools that improve accessibility and outcomes.</p>
-    </span>
 
     </div>
     <!-- 5. Governance & Social Impact -->
@@ -279,12 +278,15 @@
     // Project card modal logic
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', function() {
-        const link = card.getAttribute('data-link');
-        document.getElementById('modalLink').href = link;
+        var link = card.getAttribute('data-link');
+        var modalLink = document.getElementById('modalLink');
+        if (modalLink) {
+          modalLink.setAttribute('href', link);
+        }
         document.getElementById('projectModal').style.display = 'flex';
         document.body.style.overflow = 'hidden';
       });
-      // Keyboard accessibility (Enter key opens modal)
+
       card.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
