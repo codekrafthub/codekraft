@@ -7,24 +7,29 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
 </head>
 <body>
   <!-- Top Navigation Bar -->
   <nav class="navbar">
-    <div class="logo">CodeKraft</div>
+    <div class="logo">
+      <img src="static/codekraft_logo_white.png" alt="CodeKraft Logo" style="height: 40px; vertical-align: middle;">
+      CodeKraft
+    </div>
     <div class="nav-toggle" id="navToggle">&#9776;</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Who We Are</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="floating-cta">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section with Slider Buttons -->
   <section id="home" class="hero">
     <div class="hero-content">
+      <img src="static/codekraft_logo.png" alt="CodeKraft logo" width="90" height="90" style="vertical-align:middle">
       <h1>CodeKraft</h1>
       <p class="tagline">Where Code Becomes Craft, Dreams Become Reality</p>
       <div class="slider-buttons">
@@ -33,6 +38,8 @@
       </div>
     </div>
   </section>
+
+  <div class="scroll-indicator" style="margin-bottom: 50px;"></div>
 
   <!-- Who We Are -->
   <section id="about" class="card">
@@ -169,7 +176,7 @@
       <p>We automate repetitive tasks to save time, reduce costs, and increase efficiency.</p>
     </div>
     <!-- 3. Conversational AI & Chatbots -->
-    <div class="project-card" data-link="https://yourdomain.com/project3" tabindex="0">
+    <div class="project-card" data-link="https://kapilve.pythonanywhere.com/senti" tabindex="0">
       <div class="project-figure">
         <svg width="40" height="40" viewBox="0 0 40 40">
           <circle cx="35" cy="35" r="15" fill="#E9F1F7"/>

@@ -481,6 +481,15 @@ section {
   border: 2px solid var(--primary);
 }
 
+.project-card:hover, .service-columns > div:hover {
+  box-shadow: 0 12px 32px rgba(59,177,230,0.22);
+  transform: scale(1.03) translateY(-4px);
+}
+
+.slider-btn:hover, .external-link-btn:hover {
+  transform: scale(1.05);
+}
+
 /* Modal link icon */
 .external-link-btn {
   display: inline-flex;
@@ -540,4 +549,87 @@ section {
 @media (max-width: 800px) {
   .contact-content { flex-direction: column; }
   .contact-calendly { min-width: 0; width: 100%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.card, .project-card {
+  animation: fadeInUp 0.7s;
+}
+
+.hero {
+  background: linear-gradient(115deg, #3BB1E6 0%, #80d8ff 70%, #F5FBFF 100%);
+  position: relative;
+}
+.hero-content h1 {
+  position: relative;
+  display: inline-block;
+}
+.hero-content h1::after {
+  content: '';
+  display: inline-block;
+  width: 38px; height: 38px;
+  background: url('static/logo-symbol.svg') no-repeat center/contain;
+  margin-left: 12px;
+  vertical-align: middle;
+  animation: popLogo 1s infinite alternate;
+}
+@keyframes popLogo {
+  0% { transform: scale(1);}
+  100% { transform: scale(1.15);}
+}
+
+.slider-btn, .external-link-btn {
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.slider-btn:hover, .external-link-btn:hover {
+  background: linear-gradient(90deg, #0B2B3C 20%, #3BB1E6 100%);
+  color: #fff;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 32px rgba(59,177,230,0.32);
+}
+
+.project-card:hover .project-figure svg {
+  transform: rotate(-8deg) scale(1.13);
+  transition: transform 0.3s;
+  filter: drop-shadow(0 1px 6px #3BB1E6);
+}
+
+.scroll-indicator {
+  width: 36px; height: 36px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #3BB1E6;
+  position: relative;
+  top: 22px;
+  animation: bounceDown 1.1s infinite alternate;
+}
+@keyframes bounceDown {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(12px);}
+}
+
+.logo img:hover {
+  transform: scale(1.14) rotate(-8deg);
+  transition: transform 0.25s;
+}
+
+.external-link-btn {
+  position: relative;
+  overflow: hidden;
+}
+.external-link-btn::before {
+  content: '';
+  position: absolute;
+  left: -60px; top: 0;
+  width: 60px; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.25) 40%, transparent 100%);
+  transform: skewX(-22deg);
+  transition: left 0.5s;
+}
+.external-link-btn:hover::before {
+  left: 120%;
+  transition: left 0.7s;
 }
