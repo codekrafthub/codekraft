@@ -64,7 +64,7 @@
             <div class="accordion-body">
               <ul>
                 <li>Python, SQL, C, C++, Advanced Excel</li>
-                <li>Data Visualization, Data Science</li>
+                <li>Data Science, Data Visualization</li>
                 <li>Task Automation</li>
               </ul>
             </div>
@@ -73,11 +73,11 @@
             <button class="accordion-header">Career Readiness</button>
             <div class="accordion-body">
               <ul>
-                <li>Resume & LinkedIn building</li>
-                <li>Soft Skills</li>
                 <li>Interview Prep</li>
+                <li>Soft Skills</li>
                 <li>Counselling</li>
                 <li>Study Abroad Guidance</li>
+                <li>Resume & LinkedIn building</li>
               </ul>
             </div>
           </div>
@@ -114,9 +114,9 @@
             <button class="accordion-header">Software Solutions</button>
             <div class="accordion-body">
               <ul>
+                <li>AI/ML Consulting</li>
                 <li>Web & Mobile Apps</li>
                 <li>Cloud & Database Systems</li>
-                <li>ML Consulting</li>
                 <li>Digital Transformation</li>
               </ul>
             </div>
@@ -261,7 +261,20 @@
       </div>
     </div>
   </section>
-
+  <a href="#" id="whatsappChatBtn" class="floating-chat-btn" title="Chat with us">
+    <span class="chat-icon">
+        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer green chat bubble shape with a tail on bottom left -->
+        <path
+          d="M12 38c0 1.104.895 2 2 2h8l5 5c.7.7 1.8.11 1.8-0.8v-4.2h5c1.105 0 2-.896 2-2V16c0-1.105-.895-2-2-2H14c-1.105 0-2 .895-2 2v22z"
+          fill="#25D366"
+          stroke="#25D366"
+          stroke-width="2"
+        />
+      </svg>
+    </span>
+    <span class="chat-label">Chat with us</span>
+  </a>
   <footer>
     <p>&copy; 2025 CodeKraft. All rights reserved.</p>
   </footer>
@@ -348,6 +361,19 @@
   // No preventDefault, no custom logic
   // This should just follow the href and open in new tab
     };
+
+  document.getElementById('whatsappChatBtn').onclick = function(e) {
+    e.preventDefault();
+    var phone = "917898378933"; // Your WhatsApp number
+    var message = encodeURIComponent("Hello, I'm interested in CodeKraft services!");
+    var urlMobile = "whatsapp://send?phone=" + phone + "&text=" + message;
+    var urlWeb = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + message;
+
+    // Detect mobile device
+    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+
+    window.open(isMobile ? urlMobile : urlWeb, '_blank');
+  };
   </script>
 </body>
 </html>

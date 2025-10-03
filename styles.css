@@ -633,3 +633,69 @@ section {
   left: 120%;
   transition: left 0.7s;
 }
+
+.floating-chat-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 2000;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 54px;
+  width: 54px;
+  height: 54px;
+  transition: width 0.35s cubic-bezier(.52,.04,.32,1.47);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.floating-chat-btn .chat-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: none;
+}
+
+.floating-chat-btn .chat-label {
+  opacity: 0;
+  white-space: nowrap;
+  margin-left: 0;
+  font-size: 1em;
+  color: #128C7E;
+  font-weight: 700;
+  transition: opacity 0.2s, margin 0.35s;
+}
+
+.floating-chat-btn:hover, .floating-chat-btn:focus {
+  width: 170px;
+}
+
+.floating-chat-btn:hover .chat-label, .floating-chat-btn:focus .chat-label {
+  opacity: 1;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .floating-chat-btn {
+    right: 16px;
+    bottom: 16px;
+    min-width: 46px;
+    width: 46px;
+    height: 46px;
+  }
+  .floating-chat-btn .chat-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .floating-chat-btn:hover, .floating-chat-btn:focus {
+    width: 140px;
+  }
+}
