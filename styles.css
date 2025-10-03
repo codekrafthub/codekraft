@@ -639,13 +639,13 @@ section {
   right: 32px;
   bottom: 32px;
   z-index: 2000;
-  background: transparent;
+  background: transparent;  /* No background on button itself */
   border: none;
   box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
   min-width: 54px;
   width: 54px;
@@ -653,49 +653,75 @@ section {
   transition: width 0.35s cubic-bezier(.52,.04,.32,1.47);
   font-weight: 600;
   text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .floating-chat-btn .chat-icon {
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
+  min-width: 30px;
+  min-height: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  transition: none;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .floating-chat-btn .chat-label {
   opacity: 0;
-  white-space: nowrap;
+  background: #25D366;
+  color: #fff;
+  border-radius: 20px;
+  padding: 7px 14px;
   margin-left: 0;
-  font-size: 1em;
-  color: #128C7E;
+  margin-right: 0;
+  font-size: 0.9em;
   font-weight: 700;
-  transition: opacity 0.2s, margin 0.35s;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(34, 34, 34, 0.20);
+  transition: opacity 0.2s, margin 0.35s, font-size 0.2s, background 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  position: relative;
 }
 
 .floating-chat-btn:hover, .floating-chat-btn:focus {
   width: 170px;
 }
 
-.floating-chat-btn:hover .chat-label, .floating-chat-btn:focus .chat-label {
+.floating-chat-btn:hover .chat-label,
+.floating-chat-btn:focus .chat-label {
   opacity: 1;
   margin-left: 0;
 }
 
+/* Mobile Styles */
 @media (max-width: 600px) {
   .floating-chat-btn {
-    right: 16px;
-    bottom: 16px;
-    min-width: 46px;
-    width: 46px;
-    height: 46px;
+    right: 10px;
+    bottom: 18px;
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    padding: 0;
+    font-size: 0.7em;
   }
   .floating-chat-btn .chat-icon {
-    width: 46px;
-    height: 46px;
+    width: 30px;
+    height: 30px;
+    min-width: 22px;
+    min-height: 22px;
   }
   .floating-chat-btn:hover, .floating-chat-btn:focus {
-    width: 140px;
+    width: 118px;
+  }
+  .floating-chat-btn:hover .chat-label,
+  .floating-chat-btn:focus .chat-label {
+    margin-left: 0;
+    font-size: 0.7em;
+    padding: 7px 10px;
   }
 }
